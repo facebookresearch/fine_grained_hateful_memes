@@ -120,7 +120,7 @@ Output:
 
 ## How to Participate
 * Join woah2021task@googlegroups.com. Your request should include the first name, last name, and affiliation of all team members.
-* Get the original phase 1 hateful memes dataset [here](https://www.drivendata.org/competitions/64/hateful-memes
+* Get the original phase 1 hateful memes dataset at https://www.drivendata.org/competitions/64/hateful-memes
 
 ## Rules
 * You must submit your code with your predictions, and make it available open source. 
