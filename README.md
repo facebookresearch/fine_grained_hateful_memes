@@ -9,10 +9,11 @@ Hate speech, however, continues to be an important challenge, and multimodal hat
 
 
 ## Shared Task Description
-Given a multimodal meme as input, detect if the meme is hate speech. In addition, if hate speech then identify the protected class as well as the attack type. Here is a brief description of each of the sub-tasks:
-* *Task A*: Hate speech detection is a binary classification task, with labels not_hateful and hateful
-* *Task B*: Protected categories is a multi-label classification task, with labels in the set -'race', 'disability', 'religion', 'nationality', 'sex'. In the case the meme is not hateful, the protected category is ‘pc_empty’.
-* *Task C*: Attack types (a is a multi-label classification task, with labels in the set - 'contempt', 'mocking', 'inferiority', 'slurs', 'exclusion', 'dehumanizing', 'inciting_violence'. In the case the meme is not hateful, the protected category is ‘attack_empty’.
+We present two detection tasks on the newly annotated hateful memes dataset: 
+Task A (multi-label): For each meme, detect the protected category. Protected categories are: race, disability, religion, nationality, sex. If the meme is not_hateful the protected category is: pc_empty.
+Task B (multi-label): For each meme, detect the attack type. Attack types are: contempt, mocking, inferiority, slurs, exclusion, dehumanizing, inciting_violence. If the meme is not_hateful the protected category is: attack_empty.
+
+Tasks A and B are multi-label because memes can contain attacks against multiple protected categories and can involve multiple attack types. 
 
 ### Input Data Format
 The fine-grained hateful memes task consists of predicting 3 classes - hate detection (hateful or not), protected classes, and attacks.
@@ -116,6 +117,20 @@ Output:
 {'task': 'pc', 'f1_micro': 0.6209523809523809, 'roc_auc': 0.8511728239769002}
 {'task': 'attack', 'f1_micro': 0.61284046692607, 'roc_auc': 0.870857207208931}
 ```
+
+## How to Participate
+* Join woah2021task@googlegroups.com. Your request should include the first name, last name, and affiliation of all team members.
+* Get the original phase 1 hateful memes dataset [here](https://www.drivendata.org/competitions/64/hateful-memes
+
+## Rules
+* You must submit your code with your predictions, and make it available open source. 
+* You cannot hand label any of the entries or manually assign them scores. 
+* You should treat the test set examples as independent.
+* Your system should predict protected category and attacks over the entire dataset, for non-hateful the model should be able to predict `pc_emtpy` and `attack_emtpy`
+* If you do not adhere to the spirit of the competition rules then your entry will be rejected.
+
+
+
 
 ## Shared Task Organizers
 * Shaoliang Nie, Facebook AI
