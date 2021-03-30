@@ -129,7 +129,8 @@ Output:
 * Your system should predict protected category and attacks over the entire dataset, for non-hateful the model should be able to predict `pc_emtpy` and `attack_emtpy`
 * If you do not adhere to the spirit of the competition rules then your entry will be rejected.
 
-
+## Starter Code
+Configurations in MMF are now available here https://github.com/facebookresearch/mmf/tree/master/projects/hateful_memes/fine_grained
 
 
 ## Shared Task Organizers
