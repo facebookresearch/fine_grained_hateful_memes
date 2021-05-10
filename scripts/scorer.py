@@ -47,7 +47,7 @@ if __name__ == "__main__":
         reference = pd.read_json(gold_f, lines=True)
 
     with open(args.pred_file_path, encoding="utf-8") as pred_f:
-        predictions = pd.read_json(gold_f, lines=True)
+        predictions = pd.read_json(pred_f, lines=True)
 
     eval_dataset = predictions.merge(reference, on='id')
 
